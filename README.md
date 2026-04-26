@@ -1,6 +1,6 @@
 # ResearchFlow AI 🔬
 
-ResearchFlow AI is an advanced, multi-agent system that autonomously researches, synthesizes, and critiques information on any given topic. Powered by LangGraph and Groq, this application employs a team of specialized AI agents working in tandem to deliver comprehensive and accurate research reports.
+ResearchFlow AI is an advanced, multi-agent system that autonomously researches, synthesizes, and critiques information on any given topic. Powered by LangChain and Groq, this application employs a team of specialized AI agents working in tandem to deliver comprehensive and accurate research reports.
 
 ## Features ✨
 
