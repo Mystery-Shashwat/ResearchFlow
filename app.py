@@ -1,4 +1,5 @@
 import streamlit as st
+import markdown
 from pipeline import run_research_pipeline
 
 # ── Page Config ────────────────────────────────────────────────────────────────
@@ -364,17 +365,15 @@ with content_col:
             st.markdown('<div class="sec-divider"></div>', unsafe_allow_html=True)
             st.markdown('<div class="sec-label">✍️ Writer Agent — Final Report</div>',
                         unsafe_allow_html=True)
-            st.markdown('<div class="report-card">', unsafe_allow_html=True)
-            st.markdown(results.get("report", ""), unsafe_allow_html=False)
-            st.markdown('</div>', unsafe_allow_html=True)
+            report_html = markdown.markdown(results.get("report", ""))
+            st.markdown(f'<div class="report-card">{report_html}</div>', unsafe_allow_html=True)
 
         with feedback_ph.container():
             st.markdown('<div class="sec-divider"></div>', unsafe_allow_html=True)
             st.markdown('<div class="sec-label">✅ Critic Agent — Review & Feedback</div>',
                         unsafe_allow_html=True)
-            st.markdown('<div class="report-card">', unsafe_allow_html=True)
-            st.markdown(results.get("feedback", ""), unsafe_allow_html=False)
-            st.markdown('</div>', unsafe_allow_html=True)
+            feedback_html = markdown.markdown(results.get("feedback", ""))
+            st.markdown(f'<div class="report-card">{feedback_html}</div>', unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
